@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: cloud-system
+  profiles:
+    active: @spring.active@
+  cloud:
+    config:
+      profile: @spring.active@
+      label: master
+
+---
+
+spring:
+  profiles: local
+  cloud:
+    config:
+      enabled: true
+      name: cloud-system
+      profile: @spring.active@
+      uri: http://cloud-config:1001
