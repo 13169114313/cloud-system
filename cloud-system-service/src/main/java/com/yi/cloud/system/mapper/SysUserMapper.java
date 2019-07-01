@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 用户表持久层
+ * @author chenguoyi
  */
 @Mapper
 public interface SysUserMapper extends BaseMapper<SysUser> {

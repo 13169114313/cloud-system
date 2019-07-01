@@ -52,7 +52,11 @@
             <groupId>com.yi.cloud</groupId>
             <artifactId>kernel-actuator</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
         <dependency>
             <groupId>com.yi.cloud</groupId>
             <artifactId>cloud-system-api</artifactId>

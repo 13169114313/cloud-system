@@ -4,6 +4,7 @@ import com.yi.cloud.common.exception.IBaseExceptionEnum;
 
 /**
  * 鉴权错误枚举
+ * @author chenguoyi
  */
 public enum AuthExceptionEnum implements IBaseExceptionEnum {
     USER_NOT_FOUND(3110, "用户不存在！"),

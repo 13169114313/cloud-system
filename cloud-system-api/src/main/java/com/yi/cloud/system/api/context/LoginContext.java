@@ -10,17 +10,19 @@ import com.yi.cloud.model.api.IApiAuthService;
 import com.yi.cloud.model.context.AbstractLoginContext;
 import com.yi.cloud.model.context.AbstractLoginUser;
 import com.yi.cloud.model.context.LoginUserHolder;
+import com.yi.cloud.system.api.service.ApiAuthService;
 
 import javax.servlet.http.HttpServletRequest;
 
 /**
  * 登录信息上下文
+ * @author chenguoyi
  */
 public class LoginContext implements AbstractLoginContext {
 
-    private IApiAuthService authService;
+    private ApiAuthService authService;
 
-    public LoginContext(IApiAuthService authService) {
+    public LoginContext(ApiAuthService authService) {
         this.authService = authService;
     }
 

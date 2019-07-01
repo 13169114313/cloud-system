@@ -1,29 +1,39 @@
 package com.yi.cloud.system.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
  * 用户持久化类
+ *
+ * @author chenguoyi
  */
 @Entity
-@TableName("sys_user")
+//@TableName("sys_user")
+@Table(name = "sys_user", uniqueConstraints = {
+        @UniqueConstraint(columnNames = "userName", name = "idx_user_name")
+})
 public class SysUser implements Serializable {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long accountId;
 
+    @Column(name = "userName", length = 64)
     private String userName;
 
+    @Column(name = "password", length = 64)
     private String password;
 
+    @Column(name = "nickName", length = 64)
     private String nickName;
 
+    @Column(name = "mail", length = 64)
     private String mail;
 
+    @Column(name = "phone", length = 64)
     private String phone;
 
     public String getPhone() {

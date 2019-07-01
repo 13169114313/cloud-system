@@ -2,6 +2,7 @@ package com.yi.cloud.system.config;
 
 import com.yi.cloud.model.api.IApiAuthService;
 import com.yi.cloud.system.api.context.LoginContext;
+import com.yi.cloud.system.api.service.ApiAuthService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,7 +17,7 @@ public class ContextConfig {
      * 获取当前用户的便捷工具
      */
     @Bean
-    public LoginContext loginContext(IApiAuthService authService) {
+    public LoginContext loginContext(ApiAuthService authService) {
         return new LoginContext(authService);
     }
 

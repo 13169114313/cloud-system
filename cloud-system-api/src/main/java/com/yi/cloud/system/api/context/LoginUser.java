@@ -8,6 +8,7 @@ import java.util.Set;
 
 /**
  * 当前用户的登录信息
+ * @author chenguoyi
  */
 @SuppressWarnings("ALL")
 public class LoginUser implements AbstractLoginUser {
